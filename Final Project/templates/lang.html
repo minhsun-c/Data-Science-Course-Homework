@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Search for Topic{% endblock %}
+
+{% block content %}
+
+<style>
+    h1 {
+        font-family: "Permanent Marker", cursive;
+        font-weight: 700;
+    }
+    p {
+        font-family: "Caveat", cursive;
+        font-size: 30px;
+    }
+    .blank {
+        width: 100vw;
+        height: 10vh;
+        background-color: aqua;
+    }
+    .center_p {
+        position: relative;
+    }
+    .center_c {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+    .body {
+        width: 100vw;
+        height: 40vh;
+        background-color: aqua;
+        font-family: "Caveat", cursive;
+    }
+    form {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -40%);
+        font-size: 20px;
+    }
+    .fill {
+        width: 100vw;
+        height: 60vh;
+        background-color: aqua;
+    }
+</style>
+
+<div class="blank center_p">
+    <h1 class="center_c">Let's Learn {{topic}}!</h1>
+</div>  
+
+<div class="body center_p">
+    <center><p>
+        Enter some related topics in {{topic}}! Or type {{topic}} again.    
+    </p></center>
+    <center><p>
+        Then wait for our responses.    
+    </p></center>
+    <form method="post">
+        <input type="text" name="keyword" placeholder="Enter a keyword" required>
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+<div class="fill"></div>
+
+{% endblock %}

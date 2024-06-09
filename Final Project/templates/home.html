@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: aqua;
+    }
+    .wall_p {
+        width: 100vw;
+        height: 100vh;
+        background-color: gray;
+    }
+    .wall {
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.5;
+    }
+    .intro {
+        width: 100vw;
+    }
+    .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+    }
+    .name {
+        font-size: 80px;
+        text-transform: uppercase;
+        color: aliceblue;
+        font-family: "Permanent Marker", cursive;
+    }
+    
+    .par {
+        width: 40vw;
+        margin-top: 5vh;
+        margin-left: 30vw;
+        text-align: center;
+    }
+    .content {
+        font-family: "Josefin Sans", sans-serif;
+        color: aliceblue;
+    }
+</style>
+
+<div class="wall_p" style="position: relative;">
+    <img class="wall" src="https://images.unsplash.com/photo-1500073584060-670c36a703f1?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    <div class="intro center">
+        <center><h1 class="h1_center name"> Chang Min-Hsun </h1></center>
+        <div class="par">
+            <p class="content">
+                I am a junior student at National Dong Hua University. Although my major is computer science, I did not learn a lot of skills about artifitial intellegence or software engineering. Instead, I specialized in digital ic design.  
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

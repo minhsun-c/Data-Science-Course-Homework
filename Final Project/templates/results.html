@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+
+<style>
+    h1 {
+        font-family: "Permanent Marker", cursive;
+        font-weight: 700;
+    }
+    .blank {
+        width: 100vw;
+        height: 10vh;
+        background-color: aqua;
+    }
+    .center_p {
+        position: relative;
+    }
+    .center_c {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+</style>
+
+<div class="blank center_p">
+    <h1 class="center_c">Search Results</h1>
+</div>  
+
+<style>
+    .myflex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .mycard {
+        margin: 1vw;
+        width: 20vw;
+        font-family: "Josefin Sans", sans-serif;
+    }
+
+    .topic {
+        width: 90vw;
+        margin-left: 5vw;
+    }
+    .block {
+        width: 100vw;
+        background-color: aqua;
+    }
+    body {
+        background-color: aqua;
+    }
+    h2 {
+        font-family: "Jaro", sans-serif;
+        margin-left: 5vw;
+    }
+</style>
+
+{% if lt != 0 %}
+<div class="block">
+    <h2>Possible Titles</h2>
+    <div class="center_p" style="width: 90vw">
+        <div class="myflex topic">
+            {% for title in titles %}
+            <div class="card mycard">
+                <div class="card-body">
+                <h5 class="card-title">{{title[0]}}</h5>
+                <p class="card-text">{{title[2]}}</p>
+                <a href={{title[1]}} class="btn btn-success">More Info.</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% if ls != 0 %}
+<div class="block">
+    <h2>Possible Topics</h2>
+    <div class="center_p">
+        <div class="myflex topic">
+            {% for sub in subs %}
+            <div class="card mycard">
+                <div class="card-body">
+                <h5 class="card-title">{{sub[0]}}</h5>
+                <p class="card-text">{{sub[2]}}</p>
+                <a href={{sub[1]}} class="btn btn-success">More Info.</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div
+{% endif %}
+{% endblock %}
