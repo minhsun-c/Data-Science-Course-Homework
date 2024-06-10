@@ -1,6 +1,9 @@
-# 分析資料集
+`analyze.ipynb`: 分析 `Wine Dataset`, `20 Newsgroup Dataset` 的過程
 
-可從 `analyze.ipynb` 中取得分析 `Wine Dataset`, `20 Newsgroup Dataset` 的過程
+`breast_cancer.ipynb`: 分析 `Breast Cancer Wisconsin (Diagnostic) Dataset` ，並以此資料集訓練和預測
+
+
+# 分析資料集
 
 最終選擇使用 `Breast Cancer Wisconsin (Diagnostic) Dataset` 。因為從散佈圖可以看到這個資料集可以將資料點很完美的分成兩群，中間僅有很少數的資料點重疊。適合用 KNN 來分析。
 
