@@ -1,0 +1,7 @@
+- Outlier
+  - 計算出第一四分位 (Q1, 25%) 和第三四分位 (Q3, 75%) 的差值
+  - 若小於 Q1 - 差值，或大於 Q3 + 差值，皆視為 Outlier
+- 使用 `StandardScaler` 進行標準化
+- 結果：    
+  - Mean Squared Error: 0.38
+  - R^2 Score: 0.40   
